@@ -32,4 +32,4 @@ https://docs.google.com/spreadsheets/d/12DVEbBaq9RRfOMYLzE99nsmy2YZLnvkBtKweUQ3N
 - IDE：Cloud9
 
 ## 使用素材
-- ゲームに関する画像
+- ゲームに関する著作権フリー画像
