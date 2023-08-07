@@ -32,4 +32,4 @@ https://docs.google.com/spreadsheets/d/12DVEbBaq9RRfOMYLzE99nsmy2YZLnvkBtKweUQ3N
 - IDE：Cloud9
 
 ## 使用素材
-- ゲームに関する著作権フリー画像
+- https://playvalorant.com/ja-jp/news/game-updates/valorant-asset-kit/内のゲーム画像
