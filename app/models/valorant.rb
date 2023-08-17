@@ -1,0 +1,3 @@
+class Valorant < ApplicationRecord
+  
+end

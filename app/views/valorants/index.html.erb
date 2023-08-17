@@ -1,0 +1,24 @@
+<h2>募集</h2>
+
+ <%= form_with model: @valorant, url:valorants_index_path do |f| %>
+ 
+  <h4>目的</h4>
+   <%= f.select :purpose, [['フレンド'], ['対戦'], ['協力プレイ']] %>
+   
+  <h4>ロール</h4>
+   <%= f.select :role, [['デュエリスト'], ['コントローラー'], ['イニシエーター'], ['センチネル']] %>
+   
+　<h4>モード</h4>
+　 <%= f.select :mode, [['アンレート'], ['コンペティティブ'], ['スパイクラッシュ'], ['デスマッチ'], ['チームデスマッチ'], ['レプリケーション'], ['エスカレーション'], ['カスタムマッチ']] %>
+
+　<h4>DiscordID</h4>
+   <%= f.text_area :discord_id %>
+   
+　<h4>ValorantID</h4>
+　 <%= f.text_area :valorant_id %>
+　 
+　 <%= f.submit '募集' %>
+　 
+  <% end %>
+
+
