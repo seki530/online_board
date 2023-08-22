@@ -2,15 +2,77 @@
 <html>
   <head>
     <title>OnlineBoard</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/5fbb5dad38.js" crossorigin="anonymous"></script>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column vh-100">
+    <header class="shadow-sm">
+      
+      Online Board
+      
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              
+      <% if user_signed_in? %>
+       <li>
+        <%= link_to  root_path,class: "nav-link text-light" do %>
+         <i class="fas fa-home" aria-hidden = "true"></i>
+         <font _mstmutation="1"_msttexthash="2136498"_msthash="3">Top</font>
+         <% end %>
+      </li>
+
+      <li>
+        <%= link_to  valorants_path, class: "nav-link text-light" do %>
+         <i class="fas fa-book-open" aria-hidden = "true"></i>
+         <font _mstmutation="1"_msttexthash="5444816"_msthash="5">募集一覧</font>
+         <% end %>
+      </li>
+
+      <li>
+        <%= link_to  destroy_user_session_path, method: :delete, class: "nav-link text-light" do %>
+         <i class="fas fa-sign-out-alt" aria-hidden = "true"></i>
+         <font _mstmutation="1"_msttexthash="11328460"_msthash="6">ログアウト</font>
+        <% end %>
+      </li>
+
+    <% else %>
+
+      <li>
+        <%= link_to root_path, class: "nav-link text-light" do %>
+         <i class="fas fa-home" aria-hidden="true"></i>
+         <font _mstmutation="1"_msttexthash="2136498"_msthash="3">Top</font>
+         <% end %>
+      </li>
+
+      <li>
+        <%= link_to new_user_registration_path, class: "nav-link text-light" do %>
+         <i class="fas fa-user-plus" aria-hidden="true"></i>
+         <font _mstmutation="1"_msttexthash="9249851"_msthash="5">サインアップ</font>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to new_user_session_path, class: "nav-link text-light" do %>
+        <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+        <font _mstmutation="1"_msttexthash="5521945"_msthash="6">ログイン</font>
+        <% end %>
+      </li>
+
+    <% end %>
+     </ul>
+      </div>
+     </div>
+    </div>
+  </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
