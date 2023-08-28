@@ -27,6 +27,9 @@
 
  <% @valorants.each do |valorant| %>
 
+  <h4>ユーザーID</h4>
+   <%= valorant.user_id %>
+
   <h4>目的</h4>
    <%= valorant.purpose %>
 
@@ -43,9 +46,10 @@
    <%= valorant.valorant_id %>
 
   <h4>メッセージ</h4>
-　 <%=  valorant.message %>
+　 <%= valorant.message %>
+
 
  <% end %>
- 
- 
+
+
  <%= paginate @valorants %>

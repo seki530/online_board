@@ -19,35 +19,33 @@
       <% if user_signed_in? %>
       
        <div>
-        <%= link_to  "トップページ", root_path,class: "text-white"  %>
+        <%= link_to  "トップページ", root_path %>
        </div>
 
       <div>
-        <%= link_to  "マイページ", user_path(current_user),class: "text-white"  %>
+        <%= link_to  "マイページ", user_path(current_user)  %>
       </div>
 
       <div>
-        <%= link_to  "募集一覧", valorants_path, class: "text-white"  %>
-         
+        <%= link_to  "募集一覧", valorants_path %>
       </div>
 
       <div>
-        <%= link_to  "ログアウト", destroy_user_session_path, method: :delete, class: "text-white" %>
-        
+        <%= link_to  "ログアウト", destroy_user_session_path, method: :delete %>
       </div>
 
     <% else %>
 
       <div>
-        <%= link_to "トップページ", root_path, class: "text-white"  %>
+        <%= link_to "トップページ", root_path %>
       </div>
 
       <div>
-        <%= link_to "サインアップ", new_user_registration_path, class: "text-white"  %>
+        <%= link_to "サインアップ", new_user_registration_path %>
       </div>
 
       <div>
-        <%= link_to "ログイン", new_user_session_path, class: "text-white"  %>
+        <%= link_to "ログイン", new_user_session_path %>
       </div>
 
     <% end %>

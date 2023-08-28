@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2023_08_22_093932) do
     t.string "message"
     t.string "role"
     t.string "mode"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

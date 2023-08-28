@@ -7,6 +7,7 @@ class CreateValorants < ActiveRecord::Migration[6.1]
       t.string :message
       t.string :role
       t.string :mode
+      t.integer :user_id
       t.timestamps
     end
   end
