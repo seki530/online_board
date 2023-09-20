@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'tops#top'
 
-  resources :valorants
+  resources :valorants do
+    
+    resources :comments, only:[:create, :destroy]
+    
+  end
+  
   resources :users
 
 
