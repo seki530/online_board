@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>OnlineBoard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= csrf_meta_tags %>
@@ -8,52 +9,54 @@
 
     <script src="https://kit.fontawesome.com/5fbb5dad38.js" crossorigin="anonymous"></script>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    
+
     <div class="header">
 
       Online Board
 
       <% if user_signed_in? %>
-      
-       <div>
-        <%= link_to  "トップページ", root_path %>
+
+       <div class="font1">
+        <%= link_to  "トップページ",root_path %>
        </div>
 
-      <div>
+      <div class="font2">
         <%= link_to  "マイページ", user_path(current_user)  %>
       </div>
 
-      <div>
+      <div class="font3">
         <%= link_to  "募集一覧", valorants_path %>
       </div>
 
-      <div>
+      <div class="logout">
         <%= link_to  "ログアウト", destroy_user_session_path, method: :delete %>
       </div>
 
     <% else %>
 
       <div>
-        <%= link_to "トップページ", root_path %>
+        <%= link_to "トップページ", root_path, class:"font1" %>
       </div>
 
-      <div>
-        <%= link_to "サインアップ", new_user_registration_path %>
+      <div class="font2">
+        <%= link_to "サインアップ", new_user_registration_path, class:"font2" %>
       </div>
 
-      <div>
-        <%= link_to "ログイン", new_user_session_path %>
+      <div class="login">
+        <%= link_to "ログイン", new_user_session_path, class:"login" %>
       </div>
 
     <% end %>
-     
+
    </div>
-    
+
     <%= yield %>
-    
+
   </body>
 </html>
