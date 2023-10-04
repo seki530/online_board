@@ -1,6 +1,59 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.test {
-   color: red;
- }
+body {
+   background-color: rgb(247, 241, 233);
+}
+
+header {
+   background-color: #e3b5bf;
+   padding: 60px 0;
+   text-align: center;
+}
+
+.top-font {
+   display: block;
+   font-weight: bold;
+   font-size: 17px;
+   color: #fff;
+}
+
+.title-font{
+   font-size: 40px;
+   font-weight: bold;
+   font-family: 'Corben', cursive;
+   
+}
+
+main {
+   width: 100%;
+   padding: 40px 0;
+   background-color: rgb(247, 241, 233);
+}
+
+p {
+   text-align: center;
+   font-weight: bold;
+   color: #4c4c4c;
+   font-size: 17px;
+   
+}
+
+.parent {
+  
+  
+  padding: 20px;
+  text-align: center;
+}
+.child {
+  font-weight: bold;
+  background-color: #50abf1;
+  display: inline-block;
+  color: #fff;
+  margin: 5px;
+  font-size: 17px;
+  padding: 6px 16px;
+  border-radius: 60px;
+}
+
+
