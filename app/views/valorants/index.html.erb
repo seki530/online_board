@@ -1,48 +1,26 @@
-<h2>募集</h2>
-
- <%= form_with model: @valorant, method: :post do |f| %>
-
-  <h4>目的</h4>
-   <%= f.select :purpose, [['フレンド'], ['対戦'], ['協力プレイ']] %>
-
-  <h4>ロール</h4>
-   <%= f.select :role, [['デュエリスト'], ['コントローラー'], ['イニシエーター'], ['センチネル']] %>
-
-　<h4>モード</h4>
-　 <%= f.select :mode, [['アンレート'], ['コンペティティブ'], ['スパイクラッシュ'], ['デスマッチ'], ['チームデスマッチ'], ['レプリケーション'], ['エスカレーション'], ['カスタムマッチ']] %>
-
-　<h4>DiscordID</h4>
-   <%= f.text_field :discord_id %>
-
-　<h4>メッセージ</h4>
-　 <%= f.text_area :message %>
-
-　 <%= f.submit '募集' %>
-
-  <% end %>
 
 
  <% @valorants.each do |valorant| %>
 
-  <h4>ユーザーID</h4>
+  <h5>ユーザーID</h5>
    <%= link_to valorant.user_id, user_path(valorant.user_id) %>
 
-  <h4>目的</h4>
+  <h5>目的</h5>
    <%= valorant.purpose %>
 
-  <h4>ロール</h4>
+  <h5>ロール</h5>
    <%= valorant.role %>
    
-  <h4>モード</h4>
+  <h5>モード</h5>
    <%= valorant.mode %>
 
-  <h4>DiscordID</h4>
+  <h5>DiscordID</h5>
    <%= valorant.discord_id %>
 
-  <h4>メッセージ</h4>
+  <h5>メッセージ</h5>
 　 <%= valorant.message %>
 
-  <h4><%= link_to "募集詳細へ", valorant_path(valorant) %></h4>
+  <h5><%= link_to "募集を見る", valorant_path(valorant) %></h5>
 
  <% end %>
 

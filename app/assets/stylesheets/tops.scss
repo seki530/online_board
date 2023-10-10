@@ -1,9 +1,13 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
 body {
+   margin: 0;
+   height: 100%;
    background-color: rgb(247, 241, 233);
 }
+
 
 header {
    background-color: #e3b5bf;
@@ -22,12 +26,13 @@ header {
    font-size: 40px;
    font-weight: bold;
    font-family: 'Corben', cursive;
-   
+
 }
 
 main {
+   min-height: 100vh;
    width: 100%;
-   padding: 40px 0;
+   padding: 80px 0;
    background-color: rgb(247, 241, 233);
 }
 
@@ -36,15 +41,14 @@ p {
    font-weight: bold;
    color: #4c4c4c;
    font-size: 17px;
-   
+
 }
 
 .parent {
-  
-  
   padding: 20px;
   text-align: center;
 }
+
 .child {
   font-weight: bold;
   background-color: #50abf1;

@@ -1,9 +1,6 @@
 class ValorantsController < ApplicationController
 
   def index
-    @valorant = Valorant.new
-
-
     @valorants = Valorant.all.page(params[:page]).per(10).order(created_at: :desc)
   end
 
@@ -26,10 +23,10 @@ class ValorantsController < ApplicationController
     redirect_to valorants_path
   end
 
-  def edit
+  def new
+    @valorant = Valorant.new
   end
-
-
+  
   private
 
   def valorant_params

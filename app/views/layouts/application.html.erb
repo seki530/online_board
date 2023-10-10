@@ -18,22 +18,26 @@
 
     <div class="header">
 
-      
+
         <div class="header-font">Online Board</div>
-      
+
 
       <% if user_signed_in? %>
 
        <div class="font1">
-        <%= link_to  "トップページ",root_path %>
+        <%= link_to  "トップページ",root_path, class:"font1" %>
        </div>
 
       <div class="font2">
-        <%= link_to  "マイページ", user_path(current_user)  %>
+        <%= link_to  "マイページ", user_path(current_user), class:"font2"  %>
       </div>
 
       <div class="font3">
-        <%= link_to  "募集一覧", valorants_path %>
+        <%= link_to  "募集一覧", valorants_path, class:"font3" %>
+      </div>
+      
+      <div class="font4">
+        <%= link_to  "募集する", new_valorant_path, class:"font4" %>
       </div>
 
       <div class="logout">
