@@ -3,13 +3,22 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
   margin: 0;
+  padding: 0;
 
 }
 
 
 main {
-  height: 100vh;
+  min-height: 100vh;
+  margin-top: 0;
   background-color: rgb(247, 241, 233);
+}
+
+main2 {
+  min-height: 100vh;
+  margin-top: 0;
+  background-color: rgb(247, 241, 233);
+  display: flex;
 }
 
 form {
@@ -19,7 +28,35 @@ form {
   width: 450px;
   border-radius: 12px;
   background: #fff;
-  
+
+}
+
+.show {
+  margin: auto;
+  margin-top: 20px;
+  padding: 12px 20px;
+  width: 450px;
+  border-radius: 12px;
+  background: #fff;
+
+}
+
+.index {
+  margin: auto;
+  margin-top: 20px;
+  padding: 12px 20px;
+  width: 450px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.show2 {
+  margin: auto;
+  margin-top: 20px;
+  padding: 12px 20px;
+  width: 450px;
+  border-radius: 12px;
+  background: #fff;
 }
 
 .box {
@@ -35,4 +72,21 @@ h5 {
 .select {
   margin-left: 50px;
   text-align: right;
+}
+
+.button {
+  text-align: right;
+}
+
+.comments {
+  margin-right: auto;
+}
+
+.comments-index {
+  background-color: #fff;
+  border: 1px #000 solid;
+}
+
+.comment-delete {
+  margin-left: auto;
 }

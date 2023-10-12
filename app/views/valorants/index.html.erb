@@ -1,28 +1,51 @@
-
-
- <% @valorants.each do |valorant| %>
-
-  <h5>ユーザーID</h5>
-   <%= link_to valorant.user_id, user_path(valorant.user_id) %>
-
-  <h5>目的</h5>
-   <%= valorant.purpose %>
-
-  <h5>ロール</h5>
-   <%= valorant.role %>
+<body>
+ 
+ <main>
+  <div class="index">
    
-  <h5>モード</h5>
-   <%= valorant.mode %>
-
-  <h5>DiscordID</h5>
-   <%= valorant.discord_id %>
-
-  <h5>メッセージ</h5>
-　 <%= valorant.message %>
-
-  <h5><%= link_to "募集を見る", valorant_path(valorant) %></h5>
-
- <% end %>
+   <% @valorants.each do |valorant| %>
 
 
- <%= paginate @valorants %>
+  <div class="box">
+    <h5>ユーザーID</h5>
+    <%= link_to valorant.user_id, user_path(valorant.user_id) %>
+  </div>
+    
+  <div class="box">
+    <h5>目的</h5>
+    <%= valorant.purpose %>
+  </div>
+    
+  <div class="box">
+    <h5>ロール</h5>
+    <%= valorant.role %>
+  </div>
+    
+  <div class="box">
+    <h5>モード</h5>
+    <%= valorant.mode %>
+  </div>
+    
+  <div class="box">
+    <h5>DiscordID</h5>
+    <%= valorant.discord_id %>
+  </div>
+    
+  <div class="box">
+    <h5>メッセージ</h5>
+　  <%= valorant.message %>
+　</div>
+　  
+  <div class="box">
+    <div class="button"><%= link_to "募集を見る", valorant_path(valorant), class:"btn btn-primary" %></div>
+  </div>
+  
+   <% end %>
+   
+</div>
+   <%= paginate @valorants %>
+   
+ 
+  </main>
+  
+ </body>

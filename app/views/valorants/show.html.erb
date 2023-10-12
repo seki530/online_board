@@ -1,59 +1,75 @@
-<h4>ユーザーネーム</h4>
-   <%= @valorant.user.name %>
+<body>
 
-  <h4>目的</h4>
-   <%= @valorant.purpose %>
+ <main2>
 
-  <h4>ロール</h4>
-   <%= @valorant.role %>
+  <div class="show2">
 
-  <h4>モード</h4>
-   <%= @valorant.mode %>
+  <div class="box">
+    <h5>ユーザーネーム</h5>
+    <%= @valorant.user.name %>
+  </div>
 
-  <h4>DiscordID</h4>
-   <%= @valorant.discord_id %>
+  <div class="box">
+    <h5>目的</h5>
+    <%= @valorant.purpose %>
+  </div>
 
-  <h4>メッセージ</h4>
-　 <%= @valorant.message %>
+  <div class="box">
+    <h5>ロール</h5>
+    <%= @valorant.role %>
+  </div>
 
- <% if @valorant.user == current_user %>
- 
-　<%= link_to '削除する', valorant_path(@valorant.id),method: :delete, class: "btn-sm btn-danger","data-confirm"=>"本当に消しますか？" %><br>
-　
- <% end %>
-　<div class="comments ml-5 mt-5">
+  <div class="box">
+    <h5>モード</h5>
+    <%= @valorant.mode %>
+  </div>
 
-    <%= form_with(model:[@valorant, @comment], local: true) do |f| %>
+  <div class="box">
+    <h5>DiscordID</h5>
+    <%= @valorant.discord_id %>
+  </div>
 
-      <%= f.text_area :comment, :size=>"60x3",placeholder: "コメントする" %>
-      <%= f.submit "送信する", class: "btn btn-success mb-4" %>
+  <div class="box">
+    <h5>メッセージ</h5>
+　  <%= @valorant.message %>
+  </div>
 
-     <% end %>
+  <div class="button">
+   <% if @valorant.user == current_user %>
 
+  　<%= link_to '削除する', valorant_path(@valorant.id),method: :delete, class: "btn-sm btn-danger","data-confirm"=>"本当に消しますか？" %><br>
+
+   <% end %>
+  </div>
+ </div>
+
+
+
+   <div class="comments">
+        <%= form_with(model:[@valorant, @comment], local: true) do |f| %>
+        <%= f.text_area :comment, :size=>"50x3",placeholder: "コメントする" %>
+        <%= f.submit "送信する", class: "btn btn-success mb-4" %>
+        <% end %>
+   <br>
         <p>コメント件数：<%= @comments.count %></p>
-
-    <% @comments.each do |comment| %>
-
-	   <div class="comments-index mb-2">
-      <%= comment.user.name %>
-       <%= comment.created_at.strftime('%Y/%m/%d') %><br>
-        <div class="d-flex">
-
-          <%= comment.comment %>
-
-           <% if comment.user == current_user %>
-
+          <% @comments.each do |comment| %>
+	  <div class="comments-index mb-2">
+          <%= comment.user.name %>
+          <%= comment.created_at.strftime('%Y/%m/%d') %><br>
+          <div class="d-flex">
+            <%= comment.comment %>
+            <% if comment.user == current_user %>
             <div class="comment-delete">
               <%= link_to "削除", valorant_comment_path(comment.valorant, comment), method: :delete, class: "btn-sm btn-danger" %>
             </div>
           </div>
         </div>
-
         <% end %>
-
-       <% end %>
-
-       <%= paginate @comments %>
-
+        <% end %>
+        <%= paginate @comments %>
       </div>
     </div>
+
+
+ </main2>
+</body>
