@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+     margin: 0;
+ }
+
+
+ .header {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+    background-color: rgb(247, 241, 233);
+
+ }
+
+ .header-font{
+   font-size: 20px;
+   font-weight: bold;
+   font-family: 'Corben', cursive;
+
+}
+
+.font1 {
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: #4c4c4c;
+    margin-left: 32px;
+}
+
+.font2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4c4c4c;
+    text-decoration: none;
+    margin-left: 32px;
+}
+
+.font3 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4c4c4c;
+    text-decoration: none;
+    margin-left: 32px;
+}
+
+.font4 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4c4c4c;
+    text-decoration: none;
+    margin-left: 32px;
+}
+
+.login {
+    background: #50abf1;
+    font-weight: bold;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: auto;
+    padding: 6px 16px;
+    border-radius: 60px;
+}
+
+.logout {
+    background: darkgray;
+    font-weight: bold;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: auto;
+    padding: 6px 16px;
+    border-radius: 60px;
+}
+

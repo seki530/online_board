@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+main {
+  min-height: 100vh;
+  margin-top: 0;
+  background-color: rgb(247, 241, 233);
+}
+
+form {
+  margin: auto;
+  margin-top: 20px;
+  padding: 12px 20px;
+  width: 450px;
+  border-radius: 12px;
+  background: #fff;
+  
+}
+
+.field {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+h4 {
+  text-align: center;
+}
+
+.actions {
+  text-align: right;
+}

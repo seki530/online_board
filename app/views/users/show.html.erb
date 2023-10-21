@@ -1,0 +1,39 @@
+<body>
+
+ <main>
+
+ <div class="show">
+  <p>
+   <strong><%= @user.name %>　さんの登録情報</strong>
+  </p>
+
+  <div class="box">
+   <h5>ユーザーネーム</h5>
+    <%= @user.name %>
+  </div>
+
+  <div class="box">
+   <h5>よく使うエージェント</h5>
+    <%= @user.agent %><br>
+  </div>
+
+  <div class="box">
+   <h5>ランク</h5>
+    <%= @user.rank %><br>
+  </div>
+
+
+
+   <% if @user == current_user %>
+   
+　  <div class="actions">
+     <%= link_to " 編集する",edit_user_path(@user.id), class: "glyphicon glyphicon-pencil btn btn-success" %>
+    </div>
+    
+   <% end %>
+
+   </div>
+
+  </main>
+
+ </body>

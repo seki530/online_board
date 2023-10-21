@@ -1,0 +1,35 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+main {
+  min-height: 100vh;
+  margin-top: 0;
+  background-color: rgb(247, 241, 233);
+}
+
+form {
+  margin: auto;
+  margin-top: 20px;
+  padding: 12px 20px;
+  width: 450px;
+  border-radius: 12px;
+  background: #fff;
+  
+}
+
+.box {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+h5 {
+  margin-right: auto;
+}
